@@ -1,0 +1,55 @@
+image_count_per_set: 1000
+image_ids:
+  first: 0
+  last: 999
+sets:
+  FOA-Attack-Eps16:
+    method: FOA-Attack
+    epsilon_linf_pixels: 16
+    steps: 300
+    paired_target_images: true
+  MPC-Attack-Eps16:
+    method: MPC-Attack
+    epsilon_linf_pixels: 16
+    paired_target_images: true
+  M-Attack-Eps16:
+    method: M-Attack
+    epsilon_linf_pixels: 16
+    steps: 300
+    paired_target_images: true
+  AnyAttack-Eps16:
+    method: AnyAttack
+    epsilon_linf_pixels: 16
+    pretrained_attack_model: true
+    paired_target_images: false
+  AttackVLM-Eps16:
+    method: AttackVLM
+    epsilon_linf_pixels: 16
+    steps: 300
+    paired_target_images: true
+  AttackVLM-Original-Eps8:
+    method: AttackVLM
+    epsilon_linf_pixels: 8
+    steps: 300
+    paired_target_images: true
+  SSA-CWA-Eps16:
+    method: SSA-CWA
+    epsilon_linf_pixels: 16
+    steps: 10
+    paired_target_images: false
+  SSA-CWA-Original-Eps8:
+    method: SSA-CWA
+    epsilon_linf_pixels: 8
+    steps: 10
+    paired_target_images: false
+  X-Transfer-UAP-Eps16:
+    method: X-Transfer
+    epsilon_linf_pixels: 16
+    universal_perturbation: true
+    paired_target_images: false
+  X-Transfer-UAP-Original-Eps12:
+    method: X-Transfer
+    epsilon_linf_pixels: 12
+    universal_perturbation: true
+    paired_target_images: false
+

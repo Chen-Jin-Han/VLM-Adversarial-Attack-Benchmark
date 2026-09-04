@@ -1,0 +1,27 @@
+[submodule "Projects/FOA-Attack"]
+	path = Projects/FOA-Attack
+	url = https://github.com/jiaxiaojunQAQ/FOA-Attack.git
+[submodule "Projects/MPC-Attack"]
+	path = Projects/MPC-Attack
+	url = https://github.com/LiYuanBoJNU/MPCAttack.git
+[submodule "Projects/M-Attack"]
+	path = Projects/M-Attack
+	url = https://github.com/VILA-Lab/M-Attack.git
+[submodule "Projects/AnyAttack"]
+	path = Projects/AnyAttack
+	url = https://github.com/jiamingzhang94/AnyAttack.git
+[submodule "Projects/AttackVLM"]
+	path = Projects/AttackVLM
+	url = https://github.com/yunqing-me/AttackVLM.git
+[submodule "Projects/SSA-CWA"]
+	path = Projects/SSA-CWA
+	url = https://github.com/huanranchen/AdversarialAttacks.git
+[submodule "Projects/X-Transfer"]
+	path = Projects/X-Transfer
+	url = https://github.com/HanxunH/XTransferBench.git
+[submodule "Projects/CoA"]
+	path = Projects/CoA
+	url = https://github.com/Shelton1013/Chain_of_Attack.git
+[submodule "Projects/AdvDiffAttack"]
+	path = Projects/AdvDiffAttack
+	url = https://github.com/gq-max/AdvDiffVLM.git
