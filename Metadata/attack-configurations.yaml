@@ -58,3 +58,21 @@ sets:
     epsilon_linf_pixels: 12
     universal_perturbation: true
     paired_target_images: false
+  X-Transfer-Paired-Eps16:
+    method: X-Transfer
+    pipeline_variant: paired_adaptation
+    epsilon_linf_pixels: 16
+    steps: 300
+    initialization: xtransfer_large_linf_eps12_non_targeted
+    target_feature_model: openai/clip-vit-base-patch32
+    universal_perturbation: false
+    paired_target_images: true
+  X-Transfer-Paired-Original-Eps12:
+    method: X-Transfer
+    pipeline_variant: paired_adaptation
+    epsilon_linf_pixels: 12
+    steps: 300
+    initialization: xtransfer_large_linf_eps12_non_targeted
+    target_feature_model: openai/clip-vit-base-patch32
+    universal_perturbation: false
+    paired_target_images: true

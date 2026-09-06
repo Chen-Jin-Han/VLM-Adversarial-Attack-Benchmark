@@ -30,6 +30,8 @@ The repository is intended for reproducible academic research on adversarial tra
 | `SSA-CWA-Original-Eps8` | SSA-CWA | Original L-inf 8/255 | 10 outer steps | No target-image pair | 1,000 |
 | `X-Transfer-UAP-Eps16` | X-Transfer | Interpolated L-inf 16/255 | Pretrained UAP | No | 1,000 |
 | `X-Transfer-UAP-Original-Eps12` | X-Transfer | Original L-inf 12/255 | Pretrained UAP | No | 1,000 |
+| `X-Transfer-Paired-Eps16` | X-Transfer paired adaptation | L-inf 16/255 | 300 steps | Yes | 1,000 |
+| `X-Transfer-Paired-Original-Eps12` | X-Transfer paired adaptation | Original L-inf 12/255 | 300 steps | Yes | 1,000 |
 
 Every published directory contains exactly 1,000 readable images named `0.png` through `999.png`.
 
@@ -38,11 +40,12 @@ Every published directory contains exactly 1,000 readable images named `0.png` t
 The image sets do not all represent the same attack objective.
 
 - FOA-Attack, MPC-Attack, M-Attack, M-Attack-v2, and AttackVLM use paired source and target images.
-- X-Transfer results use a universal adversarial perturbation (UAP). They are not one-to-one source-target attacks.
+- The `X-Transfer-UAP-*` results use a universal adversarial perturbation and are not one-to-one source-target attacks.
+- The `X-Transfer-Paired-*` results are a benchmark adaptation initialized from the released X-Transfer UAP and then optimized against the corresponding target-image feature for each numeric source-target pair. This is not the official X-Transfer UAP protocol.
 - SSA-CWA is an untargeted ensemble attack in this benchmark configuration.
 - AnyAttack uses its pretrained attack model and does not consume the paired target images.
 
-Consequently, X-Transfer, SSA-CWA, and AnyAttack outputs must not be reported as pairwise target-image attacks.
+Consequently, the `X-Transfer-UAP-*`, SSA-CWA, and AnyAttack outputs must not be reported as pairwise target-image attacks. Only the explicitly named `X-Transfer-Paired-*` adaptation uses paired target images.
 
 `M-Attack-v2-Eps16` is a revised benchmark execution pipeline based on the same M-Attack paper and official project; it is not a separate published method.
 

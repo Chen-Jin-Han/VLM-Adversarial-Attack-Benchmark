@@ -13,7 +13,8 @@ The standardized variants use an L-inf budget of 16/255 where the method support
 The methods in this repository do not share a single objective:
 
 - FOA-Attack, MPC-Attack, M-Attack, M-Attack-v2, and AttackVLM consume paired source and target images.
-- X-Transfer uses its released universal adversarial perturbation. The perturbation was applied to each source image independently of the target-image directory.
+- The `X-Transfer-UAP-*` sets use the released universal adversarial perturbation. It was applied to each source image independently of the target-image directory.
+- The `X-Transfer-Paired-*` sets are an adapted protocol: the released X-Transfer UAP initializes each sample, followed by 300 steps of target-feature optimization using the numerically corresponding target image and OpenAI CLIP ViT-B/32. These sets are paired but are not outputs of the official X-Transfer UAP protocol.
 - SSA-CWA uses an untargeted ensemble objective with source-image labels predicted by the surrogate ensemble.
 - AnyAttack uses the released pretrained attack model and does not consume the paired target-image directory.
 
