@@ -12,14 +12,15 @@ The standardized variants use an L-inf budget of 16/255 where the method support
 
 The methods in this repository do not share a single objective:
 
-- FOA-Attack, MPC-Attack, M-Attack, and AttackVLM consume paired source and target images.
+- FOA-Attack, MPC-Attack, M-Attack, M-Attack-v2, and AttackVLM consume paired source and target images.
 - X-Transfer uses its released universal adversarial perturbation. The perturbation was applied to each source image independently of the target-image directory.
 - SSA-CWA uses an untargeted ensemble objective with source-image labels predicted by the surrogate ensemble.
 - AnyAttack uses the released pretrained attack model and does not consume the paired target-image directory.
 
 These distinctions must be retained in downstream comparisons and publications.
 
+M-Attack-v2 denotes the revised benchmark execution pipeline based on M-Attack. It shares the M-Attack paper and official project reference and is not a separate published method.
+
 ## File naming
 
 Each directory uses numeric image identifiers from `0` through `999`. Identical numeric identifiers across methods refer to the same source-image index, but do not imply that every method optimizes against a paired target image.
-

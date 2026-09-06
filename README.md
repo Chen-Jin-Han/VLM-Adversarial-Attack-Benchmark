@@ -22,6 +22,7 @@ The repository is intended for reproducible academic research on adversarial tra
 | `FOA-Attack-Eps16` | FOA-Attack | L-inf 16/255 | 300 steps | Yes | 1,000 |
 | `MPC-Attack-Eps16` | MPC-Attack | L-inf 16/255 | Project pipeline | Yes | 1,000 |
 | `M-Attack-Eps16` | M-Attack | L-inf 16/255 | 300 steps | Yes | 1,000 |
+| `M-Attack-v2-Eps16` | M-Attack revised pipeline | L-inf 16/255 | 300 steps | Yes | 1,000 |
 | `AnyAttack-Eps16` | AnyAttack | L-inf 16/255 | Pretrained attack model | No target-image pair | 1,000 |
 | `AttackVLM-Eps16` | AttackVLM | L-inf 16/255 | 300 steps | Yes | 1,000 |
 | `AttackVLM-Original-Eps8` | AttackVLM | Original L-inf 8/255 | 300 steps | Yes | 1,000 |
@@ -36,12 +37,14 @@ Every published directory contains exactly 1,000 readable images named `0.png` t
 
 The image sets do not all represent the same attack objective.
 
-- FOA-Attack, MPC-Attack, M-Attack, and AttackVLM use paired source and target images.
+- FOA-Attack, MPC-Attack, M-Attack, M-Attack-v2, and AttackVLM use paired source and target images.
 - X-Transfer results use a universal adversarial perturbation (UAP). They are not one-to-one source-target attacks.
 - SSA-CWA is an untargeted ensemble attack in this benchmark configuration.
 - AnyAttack uses its pretrained attack model and does not consume the paired target images.
 
 Consequently, X-Transfer, SSA-CWA, and AnyAttack outputs must not be reported as pairwise target-image attacks.
+
+`M-Attack-v2-Eps16` is a revised benchmark execution pipeline based on the same M-Attack paper and official project; it is not a separate published method.
 
 ## Perturbation settings
 
@@ -83,4 +86,3 @@ This repository is provided solely for academic research, robustness evaluation,
 ## Licensing and attribution
 
 Each project under `Projects/` remains governed by its upstream license. Each paper remains the property of its authors and publisher. The generated images and benchmark metadata do not change the licensing terms of the source datasets or upstream models. Please cite the original papers when using a method or its results.
-
