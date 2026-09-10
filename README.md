@@ -12,6 +12,7 @@ The repository is intended for reproducible academic research on adversarial tra
 ├── Papers/              # Papers and citation information
 ├── Projects/            # Official implementations as Git submodules
 ├── Metadata/            # Configuration and dataset manifests
+├── LICENSE              # MIT License for original benchmark materials
 └── README.md
 ```
 
@@ -34,12 +35,6 @@ The repository is intended for reproducible academic research on adversarial tra
 | `X-Transfer-Paired-Original-Eps12` | X-Transfer paired adaptation | Original L-inf 12/255 | 300 steps | Yes | 1,000 |
 
 Every published directory contains exactly 1,000 readable images named `0.png` through `999.png`.
-
-## M-Attack-v2 benchmark configuration
-
-`Adversarial-Images/M-Attack-v2-Eps16/` contains the complete 1,000-image output of the revised M-Attack benchmark pipeline. It uses paired source and target images, an L-inf perturbation budget of 16/255, and 300 optimization steps.
-
-M-Attack-v2 is a reproducibility-oriented revision of the benchmark execution pipeline based on the same M-Attack paper and official project. It is reported separately from `M-Attack-Eps16` for transparent comparison, but it is not a separate published attack method.
 
 ## Important comparability note
 
