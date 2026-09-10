@@ -35,6 +35,12 @@ The repository is intended for reproducible academic research on adversarial tra
 
 Every published directory contains exactly 1,000 readable images named `0.png` through `999.png`.
 
+## M-Attack-v2 benchmark configuration
+
+`Adversarial-Images/M-Attack-v2-Eps16/` contains the complete 1,000-image output of the revised M-Attack benchmark pipeline. It uses paired source and target images, an L-inf perturbation budget of 16/255, and 300 optimization steps.
+
+M-Attack-v2 is a reproducibility-oriented revision of the benchmark execution pipeline based on the same M-Attack paper and official project. It is reported separately from `M-Attack-Eps16` for transparent comparison, but it is not a separate published attack method.
+
 ## Important comparability note
 
 The image sets do not all represent the same attack objective.
@@ -46,8 +52,6 @@ The image sets do not all represent the same attack objective.
 - AnyAttack uses its pretrained attack model and does not consume the paired target images.
 
 Consequently, the `X-Transfer-UAP-*`, SSA-CWA, and AnyAttack outputs must not be reported as pairwise target-image attacks. Only the explicitly named `X-Transfer-Paired-*` adaptation uses paired target images.
-
-`M-Attack-v2-Eps16` is a revised benchmark execution pipeline based on the same M-Attack paper and official project; it is not a separate published method.
 
 ## Perturbation settings
 
@@ -88,4 +92,6 @@ This repository is provided solely for academic research, robustness evaluation,
 
 ## Licensing and attribution
 
-Each project under `Projects/` remains governed by its upstream license. Each paper remains the property of its authors and publisher. The generated images and benchmark metadata do not change the licensing terms of the source datasets or upstream models. Please cite the original papers when using a method or its results.
+The original benchmark documentation, metadata, and code in this repository are released under the [MIT License](LICENSE).
+
+The MIT License does not supersede third-party rights: each project under `Projects/` remains governed by its upstream license, papers remain subject to their authors' and publishers' terms, and source datasets and models retain their original licenses. Please cite the original papers when using a method or its results.
