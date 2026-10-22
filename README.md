@@ -19,7 +19,7 @@ The repository is intended for reproducible academic research on adversarial tra
 ## Available adversarial-image sets
 
 | Directory | Method | Perturbation setting | Optimization | Target-image pairing | Images |
-|---|---|---:|---:|---|---:|
+|:---:|:---:|:---:|:---:|:---:|:---:|
 | `FOA-Attack-Eps16` | FOA-Attack | L-inf 16/255 | 300 steps | Yes | 1,000 |
 | `MPC-Attack-Eps16` | MPC-Attack | L-inf 16/255 | Project pipeline | Yes | 1,000 |
 | `M-Attack-Eps16` | M-Attack | L-inf 16/255 | 300 steps | Yes | 1,000 |
