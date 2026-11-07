@@ -34,15 +34,24 @@
       "name": "X-Transfer-Paired-Original-Eps12",
       "configured_epsilon_linf_pixels": 12,
       "reason": "non_16_pixel_budget"
+    },
+    {
+      "name": "M-Attack-v2-Eps16",
+      "configured_epsilon_linf_pixels": 16,
+      "reason": "revised_v1_pipeline_mislabeled_as_v2_not_the_official_arxiv_2602_17645_method"
     }
   ],
   "retained_sets": [
     "FOA-Attack-Eps16",
     "MPC-Attack-Eps16",
     "M-Attack-Eps16",
-    "M-Attack-v2-Eps16",
     "AttackVLM-Eps16",
     "X-Transfer-Paired-Eps16"
   ],
-  "README_unchanged": true
+  "official_replacement": {
+    "project": "Projects/M-Attack-V2",
+    "author_released_images": "Author-Releases/M-Attack-V2-Eps16",
+    "image_count": 100,
+    "included_in_complete_matched_1000_image_benchmark": false
+  }
 }

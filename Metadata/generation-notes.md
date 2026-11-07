@@ -7,7 +7,6 @@ The active benchmark contains only complete 1,000-image sets configured for an L
 - FOA-Attack-Eps16
 - MPC-Attack-Eps16
 - M-Attack-Eps16
-- M-Attack-v2-Eps16
 - AttackVLM-Eps16
 - X-Transfer-Paired-Eps16
 
@@ -17,7 +16,7 @@ The pixel audit compares each published adversarial PNG with the numerically cor
 
 ## Method distinctions
 
-M-Attack-v2 is the revised benchmark execution pipeline based on M-Attack. It shares the M-Attack paper and official project reference and is not a separate published method.
+The old M-Attack-v2-Eps16 directory was a revised V1 pipeline, not the official M-Attack-V2 from arXiv:2602.17645, and has been removed. The genuine upstream project is pinned in Projects/M-Attack-V2. Its author-released budget-16 set contains 100 images and is preserved separately in Author-Releases/M-Attack-V2-Eps16 with upstream metadata and per-file hashes. It is not counted as a complete matched 1,000-image benchmark, and no old pipeline scores are reused.
 
 X-Transfer-Paired-Eps16 is an adapted protocol. The released X-Transfer perturbation initializes each sample, followed by 300 steps of target-feature optimization using the corresponding target image and OpenAI CLIP ViT-B/32. It is a paired adaptation rather than an output of the official universal-perturbation protocol.
 

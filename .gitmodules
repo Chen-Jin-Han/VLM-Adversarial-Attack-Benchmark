@@ -25,3 +25,7 @@
 [submodule "Projects/AdvDiffAttack"]
 	path = Projects/AdvDiffAttack
 	url = https://github.com/gq-max/AdvDiffVLM.git
+
+[submodule "Projects/M-Attack-V2"]
+	path = Projects/M-Attack-V2
+	url = https://github.com/VILA-Lab/M-Attack-V2.git
