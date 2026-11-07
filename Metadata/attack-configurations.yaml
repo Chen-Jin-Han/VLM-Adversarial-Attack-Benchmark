@@ -8,56 +8,41 @@ sets:
     epsilon_linf_pixels: 16
     steps: 300
     paired_target_images: true
+    verified_image_count: 1000
+    verified_maximum_actual_linf_pixels: 16
+    published_lfs_sha256_verified: true
   MPC-Attack-Eps16:
     method: MPC-Attack
     epsilon_linf_pixels: 16
     paired_target_images: true
+    verified_image_count: 1000
+    verified_maximum_actual_linf_pixels: 16
+    published_lfs_sha256_verified: true
   M-Attack-Eps16:
     method: M-Attack
     epsilon_linf_pixels: 16
     steps: 300
     paired_target_images: true
+    verified_image_count: 1000
+    verified_maximum_actual_linf_pixels: 16
+    published_lfs_sha256_verified: true
   M-Attack-v2-Eps16:
     method: M-Attack
     pipeline_variant: revised
     epsilon_linf_pixels: 16
     steps: 300
     paired_target_images: true
-  AnyAttack-Eps16:
-    method: AnyAttack
-    epsilon_linf_pixels: 16
-    pretrained_attack_model: true
-    paired_target_images: false
+    verified_image_count: 1000
+    verified_maximum_actual_linf_pixels: 16
+    published_lfs_sha256_verified: true
   AttackVLM-Eps16:
     method: AttackVLM
     epsilon_linf_pixels: 16
     steps: 300
     paired_target_images: true
-  AttackVLM-Original-Eps8:
-    method: AttackVLM
-    epsilon_linf_pixels: 8
-    steps: 300
-    paired_target_images: true
-  SSA-CWA-Eps16:
-    method: SSA-CWA
-    epsilon_linf_pixels: 16
-    steps: 10
-    paired_target_images: false
-  SSA-CWA-Original-Eps8:
-    method: SSA-CWA
-    epsilon_linf_pixels: 8
-    steps: 10
-    paired_target_images: false
-  X-Transfer-UAP-Eps16:
-    method: X-Transfer
-    epsilon_linf_pixels: 16
-    universal_perturbation: true
-    paired_target_images: false
-  X-Transfer-UAP-Original-Eps12:
-    method: X-Transfer
-    epsilon_linf_pixels: 12
-    universal_perturbation: true
-    paired_target_images: false
+    verified_image_count: 1000
+    verified_maximum_actual_linf_pixels: 16
+    published_lfs_sha256_verified: true
   X-Transfer-Paired-Eps16:
     method: X-Transfer
     pipeline_variant: paired_adaptation
@@ -67,12 +52,7 @@ sets:
     target_feature_model: openai/clip-vit-base-patch32
     universal_perturbation: false
     paired_target_images: true
-  X-Transfer-Paired-Original-Eps12:
-    method: X-Transfer
-    pipeline_variant: paired_adaptation
-    epsilon_linf_pixels: 12
-    steps: 300
-    initialization: xtransfer_large_linf_eps12_non_targeted
-    target_feature_model: openai/clip-vit-base-patch32
-    universal_perturbation: false
-    paired_target_images: true
+    verified_image_count: 1000
+    verified_maximum_actual_linf_pixels: 16
+    published_lfs_sha256_verified: true
+pairing_manifest: Metadata/foa-source-target-pairs.json

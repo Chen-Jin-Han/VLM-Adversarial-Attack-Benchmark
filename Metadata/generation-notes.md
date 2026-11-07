@@ -1,27 +1,26 @@
 # Generation Notes
 
-## Scope
+## Current benchmark scope
 
-Only complete sets containing 1,000 readable images are published. Incomplete and smoke-test outputs are excluded.
+The active benchmark contains only complete 1,000-image sets configured for an L-infinity budget of 16/255 and paired source-target attacks:
 
-## Standardized and original settings
+- FOA-Attack-Eps16
+- MPC-Attack-Eps16
+- M-Attack-Eps16
+- M-Attack-v2-Eps16
+- AttackVLM-Eps16
+- X-Transfer-Paired-Eps16
 
-The standardized variants use an L-inf budget of 16/255 where the method supports a pixel-bounded perturbation. If an official configuration uses a different budget, an additional directory with `Original` in its name preserves that budget.
+The exact original FOA numeric source-target correspondence is preserved in `foa-source-target-pairs.json`. Image IDs are 0 through 999. The manifest records source and target hashes rather than relying on filenames alone.
 
-## Attack objectives
+The pixel audit compares each published adversarial PNG with the numerically corresponding canonical FOA source. All retained files must match their original published Git LFS SHA-256 and length, be readable 224-by-224 images, and have a maximum absolute RGB pixel difference no greater than 16. `benchmark-audit.json` records these checks per image. Target pairing is declared by the existing benchmark generation configuration; its provenance is distinct from the independently checked image hashes and source-relative pixel budgets.
 
-The methods in this repository do not share a single objective:
+## Method distinctions
 
-- FOA-Attack, MPC-Attack, M-Attack, M-Attack-v2, and AttackVLM consume paired source and target images.
-- The `X-Transfer-UAP-*` sets use the released universal adversarial perturbation. It was applied to each source image independently of the target-image directory.
-- The `X-Transfer-Paired-*` sets are an adapted protocol: the released X-Transfer UAP initializes each sample, followed by 300 steps of target-feature optimization using the numerically corresponding target image and OpenAI CLIP ViT-B/32. These sets are paired but are not outputs of the official X-Transfer UAP protocol.
-- SSA-CWA uses an untargeted ensemble objective with source-image labels predicted by the surrogate ensemble.
-- AnyAttack uses the released pretrained attack model and does not consume the paired target-image directory.
+M-Attack-v2 is the revised benchmark execution pipeline based on M-Attack. It shares the M-Attack paper and official project reference and is not a separate published method.
 
-These distinctions must be retained in downstream comparisons and publications.
+X-Transfer-Paired-Eps16 is an adapted protocol. The released X-Transfer perturbation initializes each sample, followed by 300 steps of target-feature optimization using the corresponding target image and OpenAI CLIP ViT-B/32. It is a paired adaptation rather than an output of the official universal-perturbation protocol.
 
-M-Attack-v2 denotes the revised benchmark execution pipeline based on M-Attack. It shares the M-Attack paper and official project reference and is not a separate published method.
+## Removed benchmark sets
 
-## File naming
-
-Each directory uses numeric image identifiers from `0` through `999`. Identical numeric identifiers across methods refer to the same source-image index, but do not imply that every method optimizes against a paired target image.
+Sets configured with budgets 8 or 12 were removed from the active image directories. AnyAttack, SSA-CWA, and universal X-Transfer outputs were also removed because these configurations do not consume the paired target images. `benchmark-cleanup.json` lists the removed directories and their reasons. Paper references and official project submodules are retained.

@@ -1,0 +1,48 @@
+{
+  "removed_sets": [
+    {
+      "name": "AnyAttack-Eps16",
+      "configured_epsilon_linf_pixels": 16,
+      "reason": "does_not_use_paired_target_images"
+    },
+    {
+      "name": "AttackVLM-Original-Eps8",
+      "configured_epsilon_linf_pixels": 8,
+      "reason": "non_16_pixel_budget"
+    },
+    {
+      "name": "SSA-CWA-Eps16",
+      "configured_epsilon_linf_pixels": 16,
+      "reason": "does_not_use_paired_target_images"
+    },
+    {
+      "name": "SSA-CWA-Original-Eps8",
+      "configured_epsilon_linf_pixels": 8,
+      "reason": "non_16_pixel_budget"
+    },
+    {
+      "name": "X-Transfer-UAP-Eps16",
+      "configured_epsilon_linf_pixels": 16,
+      "reason": "does_not_use_paired_target_images"
+    },
+    {
+      "name": "X-Transfer-UAP-Original-Eps12",
+      "configured_epsilon_linf_pixels": 12,
+      "reason": "non_16_pixel_budget"
+    },
+    {
+      "name": "X-Transfer-Paired-Original-Eps12",
+      "configured_epsilon_linf_pixels": 12,
+      "reason": "non_16_pixel_budget"
+    }
+  ],
+  "retained_sets": [
+    "FOA-Attack-Eps16",
+    "MPC-Attack-Eps16",
+    "M-Attack-Eps16",
+    "M-Attack-v2-Eps16",
+    "AttackVLM-Eps16",
+    "X-Transfer-Paired-Eps16"
+  ],
+  "README_unchanged": true
+}
