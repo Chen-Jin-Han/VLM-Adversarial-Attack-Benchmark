@@ -23,7 +23,7 @@ The active benchmark contains **six paired attack sets**, each with **1,000 imag
 | Directory | Method | Perturbation setting | Optimization | Target-image pairing | Images |
 |:---:|:---:|:---:|:---:|:---:|:---:|
 | `FOA-Attack-Eps16` | FOA-Attack | L-inf 16/255 | 300 steps | Yes | 1,000 |
-| `MPC-Attack-Eps16` | MPC-Attack | L-inf 16/255 | Project pipeline | Yes | 1,000 |
+| `MPC-Attack-Eps16` | MPC-Attack | L-inf 16/255 | 300 steps | Yes | 1,000 |
 | `M-Attack-Eps16` | M-Attack | L-inf 16/255 | 300 steps | Yes | 1,000 |
 | `M-Attack-v2-Eps16` | M-Attack revised pipeline | L-inf 16/255 | 300 steps | Yes | 1,000 |
 | `AttackVLM-Eps16` | AttackVLM | L-inf 16/255 | 300 steps | Yes | 1,000 |
