@@ -48,3 +48,14 @@ sets:
     verified_maximum_actual_linf_pixels: 16
     published_lfs_sha256_verified: true
 pairing_manifest: Metadata/foa-source-target-pairs.json
+pending_sets:
+  M-Attack-v2-Eps16:
+    method: M-Attack-V2
+    project: Projects/M-Attack-V2
+    epsilon_linf_pixels: 16
+    image_directory: Adversarial-Images/M-Attack-v2-Eps16
+    current_author_released_image_count: 100
+    expected_aligned_image_count: 1000
+    canonical_foa_pairing_verified: false
+    status: aligned_1000_image_replacement_pending
+    release_metadata: Metadata/M-Attack-v2-Eps16/provenance.json

@@ -25,18 +25,19 @@ The active benchmark contains **five paired attack sets**, each with **1,000 ima
 | `FOA-Attack-Eps16` | FOA-Attack | L-inf 16/255 | 300 steps | Yes | 1,000 |
 | `MPC-Attack-Eps16` | MPC-Attack | L-inf 16/255 | 300 steps | Yes | 1,000 |
 | `M-Attack-Eps16` | M-Attack | L-inf 16/255 | 300 steps | Yes | 1,000 |
+| `M-Attack-v2-Eps16` | M-Attack-V2 official release (aligned set pending) | L-inf 16/255 | Not independently verified | Not verified | 100 / 1,000 |
 | `AttackVLM-Eps16` | AttackVLM | L-inf 16/255 | 300 steps | Yes | 1,000 |
 | `X-Transfer-Paired-Eps16` | X-Transfer paired adaptation | L-inf 16/255 | 300 steps | Yes | 1,000 |
 
-Every active benchmark image directory contains exactly 1,000 readable 224-by-224 images named `0.png` through `999.png`, for **5,000 adversarial images** in total. Sets with budgets other than 16/255 or without paired target images have been removed from the active benchmark.
+The five complete benchmark sets each contain 1,000 readable 224-by-224 images named `0.png` through `999.png`, for **5,000 verified benchmark images** in total. `M-Attack-v2-Eps16` currently contains the 100 author-released images and is reserved for the aligned 1,000-image replacement. Sets with budgets other than 16/255 or without paired target images have been removed from the active benchmark.
 
 The current configurations are recorded in [attack-configurations.yaml](Metadata/attack-configurations.yaml). The [cleanup manifest](Metadata/benchmark-cleanup.json) lists the removed directories and reasons.
 
 ## Official M-Attack-V2 release
 
-The genuine implementation of [arXiv:2602.17645](https://arxiv.org/abs/2602.17645) is pinned under [Projects/M-Attack-V2](https://github.com/VILA-Lab/M-Attack-V2/tree/8faca6d95e1caa190d676575489ab81bb31e4d03). The previously named `M-Attack-v2-Eps16` directory was a revised V1 pipeline and has been removed.
+The genuine implementation of [arXiv:2602.17645](https://arxiv.org/abs/2602.17645) is pinned under [Projects/M-Attack-V2](https://github.com/VILA-Lab/M-Attack-V2/tree/8faca6d95e1caa190d676575489ab81bb31e4d03). The old revised V1 outputs have been removed; `Adversarial-Images/M-Attack-v2-Eps16` remains the canonical image path for the genuine V2 method.
 
-[Author-Releases/M-Attack-V2-Eps16](Author-Releases/M-Attack-V2-Eps16) contains all **100** budget-16 adversarial PNGs from the [authors' released dataset](https://huggingface.co/datasets/MBZUAI-LLM/M-Attack-V2-Adversarial-Samples), with unchanged bytes, original metadata, and a SHA-256 manifest. This release is separate from the five complete benchmark sets: it is not a 1,000-image set, and its target correspondence has not been verified against the canonical FOA manifest. No scores from the removed V1 pipeline are attributed to V2.
+[Adversarial-Images/M-Attack-v2-Eps16](Adversarial-Images/M-Attack-v2-Eps16) contains all **100** budget-16 adversarial PNGs from the [authors' released dataset](https://huggingface.co/datasets/MBZUAI-LLM/M-Attack-V2-Adversarial-Samples), with unchanged bytes. Original metadata and the SHA-256 manifest are under [Metadata/M-Attack-v2-Eps16](Metadata/M-Attack-v2-Eps16). This release is separate from the five complete benchmark sets: it is not a 1,000-image set, and its target correspondence has not been verified against the canonical FOA manifest. No scores from the removed V1 pipeline are attributed to V2.
 
 ## Important comparability note
 

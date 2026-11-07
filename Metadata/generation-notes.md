@@ -16,7 +16,7 @@ The pixel audit compares each published adversarial PNG with the numerically cor
 
 ## Method distinctions
 
-The old M-Attack-v2-Eps16 directory was a revised V1 pipeline, not the official M-Attack-V2 from arXiv:2602.17645, and has been removed. The genuine upstream project is pinned in Projects/M-Attack-V2. Its author-released budget-16 set contains 100 images and is preserved separately in Author-Releases/M-Attack-V2-Eps16 with upstream metadata and per-file hashes. It is not counted as a complete matched 1,000-image benchmark, and no old pipeline scores are reused.
+The old M-Attack-v2-Eps16 directory was a revised V1 pipeline, not the official M-Attack-V2 from arXiv:2602.17645, and its outputs have been removed. The genuine upstream project is pinned in Projects/M-Attack-V2. Its author-released budget-16 set contains 100 images and is stored in the canonical Adversarial-Images/M-Attack-v2-Eps16 directory, which will also hold the aligned 1,000-image replacement. Upstream metadata and per-file hashes are stored under Metadata/M-Attack-v2-Eps16. It is not counted as a complete matched 1,000-image benchmark, and no old pipeline scores are reused.
 
 X-Transfer-Paired-Eps16 is an adapted protocol. The released X-Transfer perturbation initializes each sample, followed by 300 steps of target-feature optimization using the corresponding target image and OpenAI CLIP ViT-B/32. It is a paired adaptation rather than an output of the official universal-perturbation protocol.
 

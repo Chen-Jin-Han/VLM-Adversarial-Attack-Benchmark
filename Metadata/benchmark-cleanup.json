@@ -50,8 +50,10 @@
   ],
   "official_replacement": {
     "project": "Projects/M-Attack-V2",
-    "author_released_images": "Author-Releases/M-Attack-V2-Eps16",
+    "author_released_images": "Adversarial-Images/M-Attack-v2-Eps16",
     "image_count": 100,
-    "included_in_complete_matched_1000_image_benchmark": false
+    "included_in_complete_matched_1000_image_benchmark": false,
+    "release_metadata": "Metadata/M-Attack-v2-Eps16",
+    "aligned_1000_image_status": "pending"
   }
 }
