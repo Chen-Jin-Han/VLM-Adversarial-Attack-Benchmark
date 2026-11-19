@@ -7,6 +7,7 @@ The active benchmark contains only complete 1,000-image sets configured for an L
 - FOA-Attack-Eps16
 - MPC-Attack-Eps16
 - M-Attack-Eps16
+- M-Attack-v2-Eps16
 - AttackVLM-Eps16
 - X-Transfer-Paired-Eps16
 
@@ -16,7 +17,7 @@ The pixel audit compares each published adversarial PNG with the numerically cor
 
 ## Method distinctions
 
-The old M-Attack-v2-Eps16 directory was a revised V1 pipeline, not the official M-Attack-V2 from arXiv:2602.17645, and its outputs have been removed. The genuine upstream project is pinned in Projects/M-Attack-V2. Its author-released budget-16 set contains 100 images and is stored in the canonical Adversarial-Images/M-Attack-v2-Eps16 directory, which will also hold the aligned 1,000-image replacement. Upstream metadata and per-file hashes are stored under Metadata/M-Attack-v2-Eps16. It is not counted as a complete matched 1,000-image benchmark, and no old pipeline scores are reused.
+M-Attack-v2-Eps16 uses the official M-Attack-V2 implementation from arXiv:2602.17645, pinned in Projects/M-Attack-V2. Its old revised V1 outputs and temporary 100-image author release have been replaced by 1,000 newly generated canonical FOA pairs. The official attack and loss code are unchanged. Retrieval uses the public COCO-Caption2017 validation split (5,000 images), rather than the train2014 pool shown in upstream documentation; two auxiliary images are selected per target by CLIP-B/16 cosine similarity. The actual configuration and per-image provenance are recorded under Metadata/M-Attack-v2-Eps16.
 
 X-Transfer-Paired-Eps16 is an adapted protocol. The released X-Transfer perturbation initializes each sample, followed by 300 steps of target-feature optimization using the corresponding target image and OpenAI CLIP ViT-B/32. It is a paired adaptation rather than an output of the official universal-perturbation protocol.
 

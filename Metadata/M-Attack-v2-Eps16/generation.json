@@ -1,0 +1,47 @@
+{
+  "method": "M-Attack-V2",
+  "paper": "https://arxiv.org/abs/2602.17645",
+  "official_project": "https://github.com/VILA-Lab/M-Attack-V2",
+  "official_commit": "8faca6d95e1caa190d676575489ab81bb31e4d03",
+  "image_count": 1000,
+  "epsilon_linf_pixels": 16,
+  "steps": 300,
+  "optimizer": "adam",
+  "alpha": 0.005,
+  "momentum": 0.9,
+  "beta": 0.3,
+  "multi_pass_num": 10,
+  "target_num": 3,
+  "batch_size": 10,
+  "backbone": [
+    "clip_b16",
+    "clip_b32",
+    "clip_laion_b32",
+    "clip_laion_g14"
+  ],
+  "source_crop_scales": [
+    [
+      0.5,
+      1.0
+    ],
+    [
+      0.5,
+      1.0
+    ],
+    [
+      0.5,
+      1.0
+    ]
+  ],
+  "changer_iters": [
+    40,
+    260
+  ],
+  "pair_manifest": "Metadata/foa-source-target-pairs.json",
+  "retrieval_corpus": "lmms-lab/COCO-Caption2017 validation split, 5000 images",
+  "retrieval_encoder": "openai/clip-vit-base-patch16",
+  "retrieval_metric": "cosine",
+  "retrieved_images_per_target": 2,
+  "seed": "2023 + first numeric image ID in each ten-image batch",
+  "upstream_attack_and_loss_modified": false
+}

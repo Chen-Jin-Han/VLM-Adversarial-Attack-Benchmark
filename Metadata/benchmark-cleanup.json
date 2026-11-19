@@ -38,7 +38,9 @@
     {
       "name": "M-Attack-v2-Eps16",
       "configured_epsilon_linf_pixels": 16,
-      "reason": "revised_v1_pipeline_mislabeled_as_v2_not_the_official_arxiv_2602_17645_method"
+      "reason": "revised_v1_pipeline_mislabeled_as_v2_not_the_official_arxiv_2602_17645_method",
+      "removed_generation": "revised_v1_pipeline",
+      "path_reused_for": "official_M-Attack-V2"
     }
   ],
   "retained_sets": [
@@ -46,14 +48,14 @@
     "MPC-Attack-Eps16",
     "M-Attack-Eps16",
     "AttackVLM-Eps16",
-    "X-Transfer-Paired-Eps16"
+    "X-Transfer-Paired-Eps16",
+    "M-Attack-v2-Eps16"
   ],
   "official_replacement": {
     "project": "Projects/M-Attack-V2",
-    "author_released_images": "Adversarial-Images/M-Attack-v2-Eps16",
-    "image_count": 100,
-    "included_in_complete_matched_1000_image_benchmark": false,
-    "release_metadata": "Metadata/M-Attack-v2-Eps16",
-    "aligned_1000_image_status": "pending"
+    "images": "Adversarial-Images/M-Attack-v2-Eps16",
+    "image_count": 1000,
+    "included_in_complete_matched_1000_image_benchmark": true,
+    "aligned_1000_image_status": "verified_complete"
   }
 }
