@@ -48,8 +48,17 @@ pairing_manifest: Metadata/foa-source-target-pairs.json
 pending_sets:
   X-Transfer-Paired-Eps16:
     method: X-Transfer
-    status: protocol_selection_pending
+    status: queued_waiting_for_free_gpu
     epsilon_linf_pixels: 16
     optimization_steps_per_pair: 300
+    pipeline_variant: per_image_target_pair_adaptation
+    initialization: zeros_per_source_image
+    candidate_search_space: official_search_space_base
+    candidate_model_count: 16
+    search_policy: UCB
+    search_rho: 2
+    search_frequency: 5
+    selected_models_per_step: 1
+    generation_manifest: Metadata/X-Transfer-Paired-Eps16/generation.json
     expected_image_count: 1000
     pairing_manifest: Metadata/foa-source-target-pairs.json

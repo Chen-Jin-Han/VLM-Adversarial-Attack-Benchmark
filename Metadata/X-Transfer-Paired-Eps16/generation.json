@@ -1,0 +1,92 @@
+{
+  "method": "X-Transfer",
+  "variant": "per_image_target_pair_adaptation",
+  "official_project": "https://github.com/HanxunH/XTransferBench",
+  "official_commit": "a109d194f0fcd450e7525faefd4acc91429064df",
+  "pair_count": 1000,
+  "epsilon_linf_pixels": 16,
+  "steps": 300,
+  "step_size": 0.00196078431372549,
+  "initialization": "zeros_per_source_image",
+  "candidate_search_space": "official_search_space_base",
+  "candidate_models": [
+    {
+      "model_name": "RN101",
+      "pretrained": "yfcc15m"
+    },
+    {
+      "model_name": "RN50",
+      "pretrained": "yfcc15m"
+    },
+    {
+      "model_name": "RN50",
+      "pretrained": "cc12m"
+    },
+    {
+      "model_name": "RN101-quickgelu",
+      "pretrained": "yfcc15m"
+    },
+    {
+      "model_name": "convnext_base",
+      "pretrained": "laion400m_s13b_b51k"
+    },
+    {
+      "model_name": "convnext_base_w",
+      "pretrained": "laion2b_s13b_b82k"
+    },
+    {
+      "model_name": "convnext_base_w",
+      "pretrained": "laion2b_s13b_b82k_augreg"
+    },
+    {
+      "model_name": "convnext_large_d",
+      "pretrained": "laion2b_s26b_b102k_augreg"
+    },
+    {
+      "model_name": "ViT-B-16",
+      "pretrained": "dfn2b"
+    },
+    {
+      "model_name": "ViT-B-16",
+      "pretrained": "datacomp_xl_s13b_b90k"
+    },
+    {
+      "model_name": "ViT-B-32",
+      "pretrained": "laion2b_s34b_b79k"
+    },
+    {
+      "model_name": "ViT-B-32",
+      "pretrained": "datacomp_xl_s13b_b90k"
+    },
+    {
+      "model_name": "ViT-L-14",
+      "pretrained": "laion400m_e32"
+    },
+    {
+      "model_name": "ViT-L-14",
+      "pretrained": "commonpool_xl_s13b_b90k"
+    },
+    {
+      "model_name": "EVA02-L-14",
+      "pretrained": "merged2b_s4b_b131k"
+    },
+    {
+      "model_name": "ViT-L-14-CLIPA",
+      "pretrained": "datacomp1b"
+    }
+  ],
+  "search_policy": "UCB",
+  "rho": 2,
+  "search_frequency": 5,
+  "selected_models_per_step": 1,
+  "batch_size": 10,
+  "target_loss": "negative_cosine_normalized_adversarial_image_vs_matched_target_image",
+  "universal_perturbation": false,
+  "pair_manifest": "Metadata/foa-source-target-pairs.json",
+  "checkpoint_interval": 25,
+  "original_service_policy": "do_not_stop_or_modify",
+  "minimum_free_gpu_mib": 24000,
+  "maximum_gpu_utilization_before_launch": 10,
+  "status": "queued_waiting_for_model_preparation_and_free_gpu",
+  "completed_images": 0
+}
