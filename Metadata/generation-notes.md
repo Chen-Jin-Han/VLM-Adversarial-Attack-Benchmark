@@ -9,6 +9,7 @@ The active benchmark contains only complete 1,000-image sets configured for an L
 - M-Attack-Eps16
 - M-Attack-v2-Eps16
 - AttackVLM-Eps16
+- X-Transfer-Paired-Eps16
 
 The exact original FOA numeric source-target correspondence is preserved in `foa-source-target-pairs.json`. Image IDs are 0 through 999. The manifest records source and target hashes rather than relying on filenames alone.
 
@@ -18,7 +19,7 @@ The pixel audit compares each published adversarial PNG with the numerically cor
 
 M-Attack-v2-Eps16 uses the official M-Attack-V2 implementation from arXiv:2602.17645, pinned in Projects/M-Attack-V2. Its old revised V1 outputs and temporary 100-image author release have been replaced by 1,000 newly generated canonical FOA pairs. The official attack and loss code are unchanged. Retrieval uses the public COCO-Caption2017 validation split (5,000 images), rather than the train2014 pool shown in upstream documentation; two auxiliary images are selected per target by CLIP-B/16 cosine similarity. The actual configuration and per-image provenance are recorded under Metadata/M-Attack-v2-Eps16.
 
-The previous X-Transfer-Paired-Eps16 outputs have been removed at the user's request. A fresh official XTransferBench checkout is being prepared for a new 16/255, 300-step experiment on the original FOA pairs. The user selected a per-pair target-image adaptation. The prepared pipeline retains the official 16-model base search space, UCB selection (rho=2, search every 5 steps, one selected model per step), and sign-gradient projection, replacing the uniform target-text embedding with the matched Target-image embedding. Independent per-source perturbations start at zero, with 300 updates and 0.5/255 step size. Preparation and real-model CPU gradient checks precede GPU execution. Existing GPU services must remain running; training is queued until a GPU is free. Incomplete outputs are excluded from the active benchmark.
+X-Transfer-Paired-Eps16 uses a freshly cloned official XTransferBench implementation with its original 16-model base search space, UCB searcher (rho=2), search frequency 5, and sign-gradient projected updates. The paired adaptation replaces the uniform text target with each Source image's corresponding Target image feature and uses independent zero-initialized perturbations. Each image receives 300 updates at a 16/255 L-infinity budget and 0.5/255 step size. One model is selected per step per single-GPU worker; pairs are processed in batches of 10. This is a protocol adaptation, not an unchanged execution of the official universal attack. Configuration, per-image records, and model-search traces are in Metadata/X-Transfer-Paired-Eps16.
 
 ## Removed benchmark sets
 

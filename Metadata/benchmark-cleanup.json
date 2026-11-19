@@ -45,7 +45,8 @@
     {
       "name": "X-Transfer-Paired-Eps16",
       "reason": "user_requested_regeneration_from_fresh_official_XTransferBench",
-      "removed_generation": "released_eps12_UAP_initialization_followed_by_single_CLIP_B32_target_optimization"
+      "removed_generation": "released_eps12_UAP_initialization_followed_by_single_CLIP_B32_target_optimization",
+      "path_reused_for": "new_zero_initialized_official_search_space_paired_adaptation"
     }
   ],
   "retained_sets": [
@@ -53,7 +54,8 @@
     "MPC-Attack-Eps16",
     "M-Attack-Eps16",
     "AttackVLM-Eps16",
-    "M-Attack-v2-Eps16"
+    "M-Attack-v2-Eps16",
+    "X-Transfer-Paired-Eps16"
   ],
   "official_replacement": {
     "project": "Projects/M-Attack-V2",

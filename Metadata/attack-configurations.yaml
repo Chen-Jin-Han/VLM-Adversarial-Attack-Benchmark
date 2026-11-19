@@ -44,21 +44,16 @@ sets:
     verified_image_count: 1000
     verified_maximum_actual_linf_pixels: 16
     published_lfs_sha256_verified: true
-pairing_manifest: Metadata/foa-source-target-pairs.json
-pending_sets:
   X-Transfer-Paired-Eps16:
     method: X-Transfer
-    status: queued_waiting_for_free_gpu
-    epsilon_linf_pixels: 16
-    optimization_steps_per_pair: 300
     pipeline_variant: per_image_target_pair_adaptation
+    epsilon_linf_pixels: 16
+    steps: 300
     initialization: zeros_per_source_image
+    universal_perturbation: false
+    paired_target_images: true
+    verified_image_count: 1000
+    canonical_foa_pairs_verified: true
     candidate_search_space: official_search_space_base
-    candidate_model_count: 16
-    search_policy: UCB
-    search_rho: 2
-    search_frequency: 5
-    selected_models_per_step: 1
     generation_manifest: Metadata/X-Transfer-Paired-Eps16/generation.json
-    expected_image_count: 1000
-    pairing_manifest: Metadata/foa-source-target-pairs.json
+pairing_manifest: Metadata/foa-source-target-pairs.json

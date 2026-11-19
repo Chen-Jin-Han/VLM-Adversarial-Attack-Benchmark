@@ -86,7 +86,5 @@
   "checkpoint_interval": 25,
   "original_service_policy": "do_not_stop_or_modify",
   "minimum_free_gpu_mib": 24000,
-  "maximum_gpu_utilization_before_launch": 10,
-  "status": "queued_waiting_for_model_preparation_and_free_gpu",
-  "completed_images": 0
+  "maximum_gpu_utilization_before_launch": 10
 }
