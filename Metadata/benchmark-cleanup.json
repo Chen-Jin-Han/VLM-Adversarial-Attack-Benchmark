@@ -41,6 +41,11 @@
       "reason": "revised_v1_pipeline_mislabeled_as_v2_not_the_official_arxiv_2602_17645_method",
       "removed_generation": "revised_v1_pipeline",
       "path_reused_for": "official_M-Attack-V2"
+    },
+    {
+      "name": "X-Transfer-Paired-Eps16",
+      "reason": "user_requested_regeneration_from_fresh_official_XTransferBench",
+      "removed_generation": "released_eps12_UAP_initialization_followed_by_single_CLIP_B32_target_optimization"
     }
   ],
   "retained_sets": [
@@ -48,7 +53,6 @@
     "MPC-Attack-Eps16",
     "M-Attack-Eps16",
     "AttackVLM-Eps16",
-    "X-Transfer-Paired-Eps16",
     "M-Attack-v2-Eps16"
   ],
   "official_replacement": {

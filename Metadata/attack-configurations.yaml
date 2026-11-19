@@ -44,16 +44,12 @@ sets:
     verified_image_count: 1000
     verified_maximum_actual_linf_pixels: 16
     published_lfs_sha256_verified: true
+pairing_manifest: Metadata/foa-source-target-pairs.json
+pending_sets:
   X-Transfer-Paired-Eps16:
     method: X-Transfer
-    pipeline_variant: paired_adaptation
+    status: protocol_selection_pending
     epsilon_linf_pixels: 16
-    steps: 300
-    initialization: xtransfer_large_linf_eps12_non_targeted
-    target_feature_model: openai/clip-vit-base-patch32
-    universal_perturbation: false
-    paired_target_images: true
-    verified_image_count: 1000
-    verified_maximum_actual_linf_pixels: 16
-    published_lfs_sha256_verified: true
-pairing_manifest: Metadata/foa-source-target-pairs.json
+    optimization_steps_per_pair: 300
+    expected_image_count: 1000
+    pairing_manifest: Metadata/foa-source-target-pairs.json
